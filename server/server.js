@@ -5,10 +5,25 @@ const cors = require('cors');
 const contactRoutes = require('./routes/contactRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const certificationRoutes = require('./routes/certificationRoutes');
+const path = require('path');
+
+const distPath = path.resolve(__dirname, '../frontend/dist');
+
 
 dotenv.config();
 
 const app = express();
+
+// Load environment variables
+require('dotenv').config();
+
+// Serve static frontend
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+app.use(express.static(distPath));
+
+// app.get('/*', (req, res) => {
+//   res.sendFile(path.resolve(distPath, 'index.html'));
+// });
 
 // Middleware
 app.use(cors());
