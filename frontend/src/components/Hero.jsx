@@ -16,7 +16,7 @@ const Hero = ({
   name = 'Yuvraj Bhatkar',
   title = 'Full-Stack Developer | DSA & Java Enthusiast',
   typewriterText = ['Web Developer', 'AI/ML Learner', 'Problem Solver'],
-  imageUrl = '/src/assets/profile.png',
+  imageUrl = '/profile.jpg',
   resumeUrl = '/Yuvraj_Bhatkar_Resume.pdf',
   githubUrl = 'https://github.com/Yuvibhatkar702',
   linkedinUrl = 'https://www.linkedin.com/in/yuvraj-bhatkar-b50a0327b'
@@ -90,7 +90,7 @@ const Hero = ({
           <div className="relative w-72 h-72 md:w-80 md:h-80 transform rotate-3">
             <div className="absolute inset-0 border-4 border-indigo-400 rounded-xl rotate-12 z-0"></div>
             <img
-              src='/src/assets/profile.jpg'
+              src={imageUrl}
               alt="Yuvraj Bhatkar"
               className="relative z-10 w-full h-full object-cover rounded-xl shadow-lg"
             />
