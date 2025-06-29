@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Typical from 'react-typical';
+import { TypeAnimation } from 'react-type-animation';
 import {
   FaReact,
   FaNodeJs,
@@ -17,10 +17,10 @@ const Hero = ({
   title = 'Full-Stack Developer | DSA & Java Enthusiast',
   typewriterText = ['Web Developer', 'AI/ML Learner', 'Problem Solver'],
   imageUrl = '/src/assets/profile.png',
-  resumeUrl = '/Yuvraj_Bhatkar_Resume.pdf', // Make sure it's in /public
+  resumeUrl = '/Yuvraj_Bhatkar_Resume.pdf',
   githubUrl = 'https://github.com/Yuvibhatkar702',
   linkedinUrl = 'https://www.linkedin.com/in/yuvraj-bhatkar-b50a0327b'
-}) => { 
+}) => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-6 py-20 relative">
       <div className="max-w-7xl w-full grid md:grid-cols-2 items-center gap-12 z-10">
@@ -43,10 +43,11 @@ const Hero = ({
             transition={{ delay: 0.8, duration: 1 }}
             className="bg-gray-800 text-indigo-300 font-mono px-4 py-2 rounded-md inline-block mb-6 shadow-md"
           >
-            <Typical
-              steps={typewriterText.flatMap(text => [text, 2000])}
-              loop={Infinity}
+            <TypeAnimation
+              sequence={typewriterText.flatMap(text => [text, 2000])}
               wrapper="p"
+              speed={50}
+              repeat={Infinity}
             />
           </motion.div>
 
