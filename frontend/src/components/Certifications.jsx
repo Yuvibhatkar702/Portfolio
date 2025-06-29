@@ -7,7 +7,7 @@ const Certifications = () => {
   const [certifications, setCertifications] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/certifications')
+    axios.get('https://portfolio-2c43.onrender.com/api/certifications')
       .then(res => setCertifications(res.data))
       .catch(err => console.error('Error fetching certifications:', err));
   }, []);
