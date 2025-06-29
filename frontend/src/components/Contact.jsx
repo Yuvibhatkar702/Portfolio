@@ -14,7 +14,7 @@ const Contact = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post("https://portfolio-2c43.onrender.com/api/contact", formData);
+      await axios.post("http://localhost:5000/api/contact", formData);
       setStatus('✅ Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
