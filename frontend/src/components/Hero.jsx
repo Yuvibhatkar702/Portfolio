@@ -16,7 +16,7 @@ const Hero = ({
   name = 'Yuvraj Bhatkar',
   title = 'Full-Stack Developer | DSA & Java Enthusiast',
   typewriterText = ['Web Developer', 'AI/ML Learner', 'Problem Solver'],
-  imageUrl = '/profile.jpg',
+  imageUrl = '/profile.jpg', // ✅ Now served from /public folder
   resumeUrl = '/Yuvraj_Bhatkar_Resume.pdf',
   githubUrl = 'https://github.com/Yuvibhatkar702',
   linkedinUrl = 'https://www.linkedin.com/in/yuvraj-bhatkar-b50a0327b'
@@ -24,6 +24,7 @@ const Hero = ({
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-6 py-20 relative">
       <div className="max-w-7xl w-full grid md:grid-cols-2 items-center gap-12 z-10">
+        
         {/* LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, y: -40 }}
