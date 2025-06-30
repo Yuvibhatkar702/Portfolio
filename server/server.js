@@ -25,6 +25,10 @@ app.use('/api/contact', contactRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/certifications', certificationRoutes);
 
+// Serve static files from public directory (for certificates, images, etc.)
+const publicPath = path.resolve(__dirname, '../frontend/public');
+app.use(express.static(publicPath));
+
 // Serve static frontend (Vite build folder)
 const distPath = path.resolve(__dirname, '../frontend/dist');
 app.use(express.static(distPath));
