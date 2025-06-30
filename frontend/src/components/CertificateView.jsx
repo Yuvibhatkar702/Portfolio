@@ -8,7 +8,12 @@ const CertificateView = () => {
   const [certificate, setCertificate] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://yuvistack.onrender.com/api/certifications/${id}`)
+    // Use local development server or production server
+    const baseURL = process.env.NODE_ENV === 'production' 
+      ? 'https://yuvistack.onrender.com' 
+      : 'http://localhost:5000';
+    
+    axios.get(`${baseURL}/api/certifications/${id}`)
       .then(res => setCertificate(res.data))
       .catch(err => {
         console.error('Error fetching certificate:', err);
