@@ -32,10 +32,10 @@ app.use('/api/certifications', certificationRoutes);
 const distPath = path.resolve(__dirname, '../frontend/dist');
 app.use(express.static(distPath));
 
-// ✅ Fallback route for React Router (must be after everything else)
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(distPath, 'index.html'));
-// });
+//✅ Fallback route for React Router (must be after everything else)
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(distPath, 'index.html'));
+});
 
 // Start server
 const PORT = process.env.PORT || 5000;
