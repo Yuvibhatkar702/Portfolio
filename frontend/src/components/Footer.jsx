@@ -32,8 +32,11 @@ const Footer = () => {
           <FaLinkedin className="text-xl" />
         </a>
         <a
-          href="yuvibhatkar702@gmail.com"
-          className="hover:text-indigo-400 transition transform hover:scale-125"
+          href="https://mail.google.com/mail/?view=cm&to=yuvibhatkar702@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-red-400 transition transform hover:scale-125"
+          title="Send email via Gmail"
         >
           <FaEnvelope className="text-xl" />
         </a>
